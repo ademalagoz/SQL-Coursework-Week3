@@ -14,7 +14,11 @@ const pool = new Pool({
 // Luke: Added 1 space between * and FROM
 app.get("/customers", (req, res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   pool.query("SELECT * FROM customers", (result) => {
+=======
+  pool.query("SELECT *FROM customers", (error, result) => {
+>>>>>>> parent of 5ed95b4 (Task 7-10)
 =======
   pool.query("SELECT *FROM customers", (error, result) => {
 >>>>>>> parent of 5ed95b4 (Task 7-10)
@@ -25,7 +29,11 @@ app.get("/customers", (req, res) => {
 // Add a new GET endpoint `/products/` to load all the products.
 app.get("/products", (req, res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   pool.query("SELECT * FROM products", (result) => {
+=======
+  pool.query("SELECT *FROM products", (error, result) => {
+>>>>>>> parent of 5ed95b4 (Task 7-10)
 =======
   pool.query("SELECT *FROM products", (error, result) => {
 >>>>>>> parent of 5ed95b4 (Task 7-10)
@@ -35,7 +43,11 @@ app.get("/products", (req, res) => {
 // Add a new GET endpoint `/availability/` to load all the products.
 app.get("/availability", (req, res) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   pool.query("SELECT * FROM product_availability", (result) => {
+=======
+  pool.query("SELECT *FROM product_availability", (error, result) => {
+>>>>>>> parent of 5ed95b4 (Task 7-10)
 =======
   pool.query("SELECT *FROM product_availability", (error, result) => {
 >>>>>>> parent of 5ed95b4 (Task 7-10)
@@ -44,6 +56,7 @@ app.get("/availability", (req, res) => {
 });
 // Add a new GET endpoint `/orders` to load all the orders.
 app.get("/orders", (req, res) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   pool.query("SELECT * FROM orders", (result) => {
     res.json(result.rows);
@@ -71,13 +84,23 @@ app.get("/customers/:customerId", (req, res) => {
   });
 });
 >>>>>>> parent of 5ed95b4 (Task 7-10)
+=======
+  pool.query("SELECT *FROM orders", (error, result) => {
+    res.json(result.rows);
+  });
+});
+>>>>>>> parent of 5ed95b4 (Task 7-10)
 
 // Task -1 Add a new GET endpoint `/customers/:customerId` to load a single customer by ID.
 app.get("/customers/:id", (req, res) => {
   const id = req.params.id;
   pool
 <<<<<<< HEAD
+<<<<<<< HEAD
     .query("SELECT * FROM customers WHERE id=$1", [customerId])
+=======
+    .query("SELECT *FROM customers WHERE id=$1", [id])
+>>>>>>> parent of 5ed95b4 (Task 7-10)
 =======
     .query("SELECT *FROM customers WHERE id=$1", [id])
 >>>>>>> parent of 5ed95b4 (Task 7-10)
